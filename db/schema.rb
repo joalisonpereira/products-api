@@ -10,14 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_21_182249) do
+ActiveRecord::Schema.define(version: 2019_01_22_094511) do
 
   create_table "products", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "name", null: false
-    t.decimal "price", precision: 10, null: false
+    t.string "name"
+    t.decimal "price", precision: 15, scale: 2
     t.text "describe"
-    t.string "photo_type", null: false
-    t.binary "photo", limit: 16777215, null: false
+    t.string "photo_type"
+    t.binary "photo", limit: 16777215
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
